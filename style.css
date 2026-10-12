@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header */
@@ -12,12 +13,16 @@ header {
     background-color: #1e3a5f;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 10px;
 }
 
 /* Main Content */
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 0 15px;
 }
@@ -28,15 +33,87 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Headings */
 h2 {
     color: #1e3a5f;
+}
+
+/* Product Layout */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Product Cards */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.product-card h3 {
+    margin-top: 0;
+}
+
+/* Product Prices */
+.price {
+    color: #1e3a5f;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Add to Cart Buttons */
+button {
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #315d8c;
+}
+
+/* Shopping Cart and Order Summary */
+.order-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.order-container section {
+    width: auto;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+    background-color: #1e3a5f;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .order-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
 }
