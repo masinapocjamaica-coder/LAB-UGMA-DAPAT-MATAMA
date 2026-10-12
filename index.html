@@ -26,13 +26,13 @@
                 <div class="product-card">
                     <h3>Ballpen</h3>
                     <p class="price">₱12.00</p>
-                    <button type="button">Add to Cart</button>
+                    <button type="button" onclick="addToCart('Ballpen', 12)">Add to Cart</button>
                 </div>
 
                 <div class="product-card">
                     <h3>Pencil</h3>
                     <p class="price">₱10.00</p>
-                    <button type="button">Add to Cart</button>
+                    <button type="button" onclick="addToCart('Pencil', 10)">Add to Cart</button>
                 </div>
 
                 <div class="product-card">
@@ -63,19 +63,30 @@
         </section>
 
         <!-- Shopping Cart and Order Summary -->
-        <div class="order-container">
+      
+<!-- Shopping Cart and Order Summary -->
+<div class="order-container">
 
-            <section id="cart">
-                <h2>Shopping Cart</h2>
-                <p>Your cart is currently empty.</p>
-            </section>
+    <!-- Shopping Cart -->
+    <section id="cart">
+        <h2>Shopping Cart</h2>
 
-            <section id="summary">
-                <h2>Order Summary</h2>
-                <p>Total Amount: <strong>₱0.00</strong></p>
-            </section>
-
+        <div id="cart-items">
+            <p>Your cart is currently empty.</p>
         </div>
+    </section>
+
+    <!-- Order Summary -->
+    <section id="summary">
+        <h2>Order Summary</h2>
+
+        <p>
+            Total Amount:
+            <strong id="total-amount">₱0.00</strong>
+        </p>
+    </section>
+
+</div>
 
         <!-- Payment Section -->
         <section id="payment">

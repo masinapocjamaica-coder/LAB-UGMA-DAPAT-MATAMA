@@ -82,6 +82,67 @@ button:hover {
     background-color: #315d8c;
 }
 
+/* Shopping Cart Items */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-info h3 {
+    margin: 0 0 8px;
+    color: #1e3a5f;
+}
+
+.cart-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Quantity Controls */
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cart-controls button {
+    padding: 8px 12px;
+}
+
+.cart-controls span {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Remove Button */
+.remove-btn {
+    background-color: #dc3545;
+}
+
+.remove-btn:hover {
+    background-color: #b02a37;
+}
+
+/* Order Summary */
+#total-amount {
+    color: #1e3a5f;
+    font-size: 22px;
+}
+
+/* Small Screen Layout */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* Shopping Cart and Order Summary */
 .order-container {
     display: grid;
